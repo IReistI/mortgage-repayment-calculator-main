@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link href="./output.css" rel="stylesheet">
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+</head>
+<body class="text-[16px] bg-slate-300 h-screen md:p-10 desktopXL:p-0 desktopXL:grid desktopXL:place-items-center">
+  <div class="desktopXL:flex desktopXL:px-24">
+    <main class="p-7 max-w-2xl mx-auto bg-white md:rounded-t-3xl desktopXL:max-w-3xl desktopXL:mx-0 desktopXL:pr-28 desktopXL:rounded-none desktopXL:rounded-l-3xl desktopXL:ml-20">
+      <header class="md:flex md:justify-between">
+        <h1 class="text-slate-700 text-2xl font-bold">Mortgage Calculator</h1>
+        <button aria-label="Clear all form fields" id="btn-clear" class="underline text-slate-500 cursor-pointer hover:opacity-75 transition-all">Clear All</button>
+      </header>
+      <form id="form" class="mt-5 md:flex md:flex-col md:flex-wrap desktopXL:mt-10" action="#">
+    
+        <div>
+          <label class="text-slate-500" for="amount">Mortgage Amount</label>
+          <div class="input-group my-1 border-2 border-slate-300 rounded-md flex hover:border-slate-500 hover:transition-all focus-within:border-primary-lime">
+            <span class="bg-slate-100 flex-shrink-0 py-3 px-4 rounded-tl-sm rounded-bl-sm text-slate-700 transition-all">$</span>
+            <input aria-label="Enter Mortgage amount" class="flex-grow pl-3 border-none focus:outline-none" type="text" name="amount" id="amount">
+          </div>
+        </div>
+    
+        <div class="mt-2 md:flex md:space-x-2 desktopXL:mt-4">
+          <div class="md:flex-1">
+            <label class="text-slate-500" for="terms">Mortgage Terms</label>
+            <div class="input-group my-1 border-2 border-slate-300 rounded-md flex hover:border-slate-500 hover:transition-all focus-within:border-primary-lime">
+              <input aria-label="Enter Mortgage terms" class="flex-grow pl-3 border-none focus:outline-none" type="text" name="terms" id="terms">
+              <span class="bg-slate-100 flex-shrink-0 py-3 px-4 rounded-tl-sm rounded-bl-sm text-slate-700 transition-all">years</span>
+            </div>
+          </div>
+          <div class="mt-2 md:mt-0 md:flex-1">
+            <label class="text-slate-500" for="rate">Interest Rate</label>
+            <div class="input-group my-1 border-2 border-slate-300 rounded-md flex hover:border-slate-500 hover:transition-all focus-within:border-primary-lime">
+              <input aria-label="Enter Mortgage interest" class="flex-grow pl-3 border-none focus:outline-none" type="text" name="rate" id="rate">
+              <span class="bg-slate-100 flex-shrink-0 py-3 px-4 rounded-tl-sm rounded-bl-sm text-slate-700 transition-all">%</span>
+            </div>
+          </div>
+        </div>
+    
+        <fieldset class="mt-2 desktopXL:mt-4">
+          <legend class="text-slate-500">Mortgage Type</legend>
+          <div class="flex border-2 border-slate-300 gap-3 pl-2 py-2 mt-1 rounded-md hover:border-primary-lime">
+            <input class="flex-shrink-0 checked:bg-red-500" type="radio" name="type" id="repayment" value="repayment" aria-label="Repayment Mortgage">
+            <label class="flex-grow" for="repayment">Repayment</label>
+          </div>
+          <div class="flex border-2 border-slate-300 gap-3 pl-2 py-2 mt-2 mb-1 rounded-md hover:border-primary-lime">
+            <input class="flex-shrink-0 active:bg-red-500" type="radio" name="type" id="interest" value="interest" aria-label="Interest Mortgage">
+            <label class="flex-grow" for="interest">Interest Only</label>
+          </div>
+        </fieldset>
+    
+        <div class="flex mt-5 py-3 rounded-3xl justify-center items-center bg-primary-lime hover:opacity-75 cursor-pointer transition-all max-w-72">
+          <img class="mr-2" src="/assets/images/icon-calculator.svg" alt="icon calculator">
+          <input aria-label="Calculate mortgage repayments" class="bg-transparent font-bold cursor-pointer" type="submit" value="Calculate Repayments">
+        </div>
+    
+      </form>
+    </main>
+    
+    <section class="bg-slate-700 p-7 max-w-2xl mx-auto md:rounded-b-3xl desktopXL:grid desktopXL:place-items-center desktopXL:mx-0 desktopXL:rounded-none desktopXL:rounded-r-3xl desktopXL:rounded-bl-[5rem] desktopXL:-translate-x-20">
+      <div class="flex flex-col items-center desktopXL:w-full" id="container-info">
+        <img src="/assets/images/illustration-empty.svg" alt="img illustration-empty">
+        <h2 class="text-slate-100 font-bold text-2xl my-2">Results shown here</h2>
+        <p class="text-slate-100 text-center">Complete the form and click “calculate repayments” to see what 
+          your monthly repayments would be.
+        </p>
+      </div>
+      <div class="flex flex-col" id="result-calculate" aria-live="polite"></div>
+    </section>
+  </div>
+  
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script type="module" src="/src/js/app.js"></script>
+</body>
+</html>

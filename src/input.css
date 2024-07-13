@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'CustomMedium';
+    src: url('/assets/fonts/PlusJakartaSans-VariableFont_wght.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'CustomBold';
+    src: url('/assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf') format('ttf');
+}
+
+.input-group:focus-within span {
+    @apply bg-primary-lime;
+    @apply text-white;
+}
