@@ -19,7 +19,7 @@ export default function clear(instance) {
     clearHTML(containerResult);
 
     const img = document.createElement("IMG");
-    img.src = '/assets/images/illustration-empty.svg';
+    img.src = 'assets/images/illustration-empty.svg';
     img.alt = 'img illustration-empty';
 
     const h2 = document.createElement("H2");
