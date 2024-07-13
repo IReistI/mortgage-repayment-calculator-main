@@ -1,5 +1,5 @@
 import { form, amountInput, termsInput, rateInput, radioInput, btnClear } from "./const.js";
-import Validation from "./Class/Validation.js";
+import Validation from "./class/Validation.js";
 import Calculate from "./class/Calculate.js";
 import clear from "./functions/btnClear.js";
 
